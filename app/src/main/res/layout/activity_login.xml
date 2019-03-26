@@ -7,23 +7,30 @@
     android:gravity="center"
     android:orientation="vertical">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp">
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            app:srcCompat="@drawable/login" />
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="9"/>
-
-
-
-
+            android:drawableLeft="@drawable/login"
+            android:hint="请输入用户名"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/login_passwordd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:hint="请输入密码"
+            android:layout_weight="1"/>
     </LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:text="登录"
+    />
 
 
 </LinearLayout>
