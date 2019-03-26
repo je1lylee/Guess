@@ -46,5 +46,5 @@ public class user {
     public void setLoginFlag(int loginFlag) {
         this.loginFlag = loginFlag;
     }
-    //TODO 数据库操作在此调用database包中的方法进行。数据库操作返回然后反馈给FrontEnd
+    public 
 }
