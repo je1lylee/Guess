@@ -1,5 +1,6 @@
 package com.example.guess;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 public class register extends AppCompatActivity {
     private EditText userName,passWord,repeatt;
     private Button register;
-
+    public static user User;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,23 @@ public class register extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(userName.getText()!=null&&passWord.getText()!=null&&repeatt.getText()!=null){
+                if(userName.getText().toString()!=""){
+                    //TODO 检查空值
+                    if (passWord.getText().toString().equals(repeatt.getText().toString())){
+                         User = new user();
+                         User.registerUser(userName.getText().toString(),passWord.getText().toString());
+                        Toast.makeText(register.this, "注册成功！您的用户名是："+User.getUserName(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(register.this,login.class);
+                        startActivity(intent);
+
+                    }
+                    else{
+                        Toast.makeText(register.this,"两次密码输入不一致，请检查后重新输入", Toast.LENGTH_SHORT).show();
+                    }
                     
                 }
                 else{
-                    Toast.makeText(register.this, "有", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this, "有项目还未填写", Toast.LENGTH_SHORT).show();
                 }
 
             }
