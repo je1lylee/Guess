@@ -24,7 +24,7 @@ public class register extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(userName.getText().toString()!=""){
+                if(!userName.getText().toString().equals("")){
                     //TODO 检查空值
                     if (passWord.getText().toString().equals(repeatt.getText().toString())){
                          User = new user();
@@ -33,9 +33,9 @@ public class register extends AppCompatActivity {
 
                         Intent intent = new Intent(register.this,login.class);
                         //如果需要使用intent用这个里面的代码;
-                        intent.putExtra("Username",userName.getText().toString());
+                        /*intent.putExtra("Username",userName.getText().toString());
                         intent.putExtra("password",passWord.getText().toString());
-                        startActivity(intent);
+                        startActivity(intent);*/
 
                     }
                     else{
