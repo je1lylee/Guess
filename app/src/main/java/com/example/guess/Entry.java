@@ -37,6 +37,8 @@ public class Entry extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         rankView = findViewById(R.id.rank);
         button = findViewById(R.id.button);
+        rankView = findViewById(R.id.rank);
+        rankView.setText(register.User.getRank());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {//Guess Box

@@ -103,6 +103,8 @@ public class shake_6 extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra("Rank",makeRank(high,times));
         setResult(RESULT_OK,intent);
+        register.User.setRank(testt);
+        register.User.setScore(leftr+rightr);
         finish();
     }
 

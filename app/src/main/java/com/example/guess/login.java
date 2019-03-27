@@ -31,7 +31,6 @@ public class login extends AppCompatActivity {
                             Intent intent = new Intent(login.this,Entry.class);
                             startActivity(intent);
                         }
-
                     }
                     else
                         Toast.makeText(login.this, "用户名或密码为空，请检查后重新输入~", Toast.LENGTH_SHORT).show();

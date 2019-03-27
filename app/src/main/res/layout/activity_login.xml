@@ -22,6 +22,7 @@
             android:id="@+id/login_passwordd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:drawableLeft="@drawable/password"
             android:hint="请输入密码"
             android:layout_weight="1"/>

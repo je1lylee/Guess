@@ -30,7 +30,11 @@ public class register extends AppCompatActivity {
                          User = new user();
                          User.registerUser(userName.getText().toString(),passWord.getText().toString());
                         Toast.makeText(register.this, "注册成功！您的用户名是："+User.getUserName(), Toast.LENGTH_SHORT).show();
+
                         Intent intent = new Intent(register.this,login.class);
+                        //如果需要使用intent用这个里面的代码;
+                        intent.putExtra("Username",userName.getText().toString());
+                        intent.putExtra("password",passWord.getText().toString());
                         startActivity(intent);
 
                     }
